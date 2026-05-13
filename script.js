@@ -40,3 +40,14 @@ totalNumberofPlants = totalNumberofPlants * 2;
 console.log("Total Number of Plants week 3: ", totalNumberofPlants);
 
 //==============================//
+function recommend(count) {
+    const pct = (count / MAX_PLANTS) * 100;
+
+    if (pct > 80) return 'Pruned';
+    if (pct >= 50 && pct <= 80) return 'Monitored';
+    return 'Planted';
+}
+
+console.log(recommend(40)); // Planted
+console.log(recommend(85)); // Monitored
+console.log(recommend(90)); // Pruned
